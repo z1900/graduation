@@ -1,0 +1,151 @@
+@charset "utf-8";
+.dou-wrap{
+	width: 100%;
+}
+.dou-wrap .dou-box{
+	width: 95%;
+	margin: 50px auto 0;
+	-webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .4);
+	box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, .4);
+}
+.dou-wrap .dou-box .dou-title{
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	position: relative;
+	border-bottom: 1px solid #e2e2e2;
+}
+.dou-wrap .dou-box .dou-title span{
+	display: inline-block;
+	width: 49%;
+	height: 45px;
+	text-align: center;
+	color: #999;
+	font-size: 1.14rem;
+	cursor: pointer;
+}
+.dou-wrap .dou-box .dou-title .switch-bottom{
+	position: absolute;
+	width: 50%;
+	height: 0;
+	border: 2px solid #848484;
+	bottom: -1px;
+	left: 0;
+}
+.dou-wrap .dou-box .dou-login .login-err, 
+.dou-wrap .dou-box .dou-register .register-err{
+	width: 90%;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	margin: 15px auto 10px;
+	border: 1px solid #eee;
+	border-radius: 3px;
+}
+.dou-wrap .dou-box .dou-login .login-err>p,
+.dou-wrap .dou-box .dou-register .register-err>p{
+	font-size: 
+}
+.dou-wrap .dou-box .dou-login, 
+.dou-wrap .dou-box .dou-register{
+	width: 90%;
+	margin: 0 auto;	
+}
+.dou-wrap .dou-box .dou-login .dou-login-form label,
+.dou-wrap .dou-box .dou-register .dou-register-form label{
+	float: left;
+	text-align: right;
+	line-height: 30px;
+	font-size: 1rem;
+	clear: both;
+	height: 30px;
+	width: 80px;
+}
+.dou-wrap .dou-box .dou-login .dou-login-form input[type='text'], 
+.dou-wrap .dou-box .dou-login .dou-login-form input[type='password'],
+.dou-wrap .dou-box .dou-register .dou-register-form input[type='text'], 
+.dou-wrap .dou-box .dou-register .dou-register-form input[type='password']{
+	height: 34px;
+	border: 1px solid #D7D7D7;
+	background: #fff;
+	float: left;
+	border-radius: 3px;
+	width: 65%;
+	padding-left: 15px;
+	margin-left: 10px;
+	border-image: none;
+}
+.dou-wrap .dou-box .dou-login .dou-login-form input[type='submit'],
+.dou-wrap .dou-box .dou-register .dou-register-form input[type='submit'],
+.dou-wrap .dou-box .dou-login .dou-login-form input[type='button'],
+.dou-wrap .dou-box .dou-register .dou-register-form input[type='button']{
+	width: 150px;
+	height: 41px;
+	margin-left: 90px;
+	padding: 0 10px;
+	background: #fd6a6f;
+	border: none;
+	border-bottom: 3px solid #fd5056;
+	outline: none;
+	font-size: 1.1rem;
+	color: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.dou-wrap .dou-box .dou-login .dou-login-form input[type='submit']:hover,
+.dou-wrap .dou-box .dou-register .dou-register-form input[type='submit']:hover,
+.dou-wrap .dou-box .dou-login .dou-login-form input[type='button']:hover,
+.dou-wrap .dou-box .dou-register .dou-register-form input[type='button']:hover{
+	background: #ff5a5f;
+	border-bottom: 3px solid #fb4b50;
+}
+.dou-wrap .dou-box .dou-login>form,
+.dou-wrap .dou-box .dou-register>form{
+	width: 97%;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+.dou-wrap .dou-box .dou-login>form li,
+.dou-wrap .dou-box .dou-register>form li{
+	margin: 15px 0;
+}
+.dou-wrap .dou-box .direct{
+	width: 100%;
+	text-align: center;
+	margin-top: 15px;
+	padding-bottom: 15px;
+}
+.dou-wrap .dou-box .direct a{
+	color: #666;
+}
+.dou-wrap .dou-box .none{
+	display: none;
+}
+.dou-wrap .dou-box .dou-title .dou-title-color{
+	color: #333;
+}
+.dou-wrap .dou-box .dou-register .register-err span{
+	color: red;
+	margin-right: 10px;
+}
+.dou-wrap .dou-box .dou-register>form li img{
+	display: inline-block;
+	margin-left: 85px;
+	cursor: pointer;
+}
+.dou-wrap .dou-login .login-err>span{
+	color: red;
+}
+#userError, #errorMessages, #errorMessages>p{
+	display: inline;
+}
+
+
+@media screen and (max-width: 440px) {
+	.dou-wrap .dou-box .dou-login .dou-login-form input[type='text'], 
+	.dou-wrap .dou-box .dou-login .dou-login-form input[type='password'],
+	.dou-wrap .dou-box .dou-register .dou-register-form input[type='text'], 
+	.dou-wrap .dou-box .dou-register .dou-register-form input[type='password']{
+		width: 53%;
+	}
+}

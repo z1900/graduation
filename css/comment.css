@@ -1,0 +1,85 @@
+@charset "utf-8";
+body{
+	padding-top: 50px;
+}
+#header{
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.back-icon{        
+    width: 1.8em; 
+    height: 1.8em;        
+    vertical-align: -0.15em;         
+    fill: currentColor;
+    overflow: hidden;
+    position: absolute;
+    top: 0.4rem;
+    left: 0.6rem;
+}
+#comment{
+	width:100%;
+	margin:0 auto;
+}
+.cm{
+	display:none;
+}
+#comment ul{
+	background:#fff;
+	margin-top: 0.4rem;
+	padding: 0 1.2rem;
+}
+#comment>ul>li{
+	padding:10px 14px;
+	list-style:none;
+	border-bottom: 1px solid #dededf;
+}
+.none{
+	display:none;
+}
+#ch{
+	margin-top:0.4rem;
+}
+#ch textarea{
+	resize: none;
+	width: 97%;
+	height:6rem;
+	margin:0 auto;
+}
+#comment #btnc{
+	float: right;
+	margin:0.4rem 0.5rem 0 0;
+}
+.zan,.huifu{
+	cursor:pointer;
+}
+.zan,.num{
+	margin:0 0.2rem 0 0;
+}
+.p-user{
+	margin-right:1.8rem;
+	font-size: 0.95rem;
+	color:#474747;
+}
+.p-time{
+	font-size: 0.75rem;
+	color: #626262;
+}
+.p-content{
+	font-size: 0.8rem;
+	color:#343434;
+}
+.p-footer{
+	margin-top:0.6rem;
+	color:#6c7477;
+}
+#comment h3{
+	color:#474747;
+	font-weight: normal;
+	text-align: left;
+	padding: 0.3rem 0;
+	margin-left: 1.4rem; 
+	font-size: 1.1rem;
+}

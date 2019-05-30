@@ -1,0 +1,31 @@
+$(document).ready(function(){
+
+	$("#dou-register").validate({
+		//errorElement:"span",
+		errorLabelContainer:"#errorMessages",
+		wrapper:"span",
+		rules:{
+			pwd:{
+				required:true,
+				minlength:6,
+				maxlength:14
+			},
+			vpwd:{
+				required:true,
+				equalTo:"#pwd"
+			}
+		},
+		messages:{
+			pwd:{
+				required:"密码不能为空",
+				minlength:"密码最少6位",
+				maxlength:"密码最多14位"
+			},
+			vpwd:{
+				required:"请再次填写密码",
+				equalTo:"两次密码输入不一致"
+			}
+		}
+	})
+
+})

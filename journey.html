@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0, maximum-scale=1.0"">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/botFixed.css">
+<link rel="stylesheet" href="css/journey.css">
+<script src="svg/iconfont.js"></script>
+<title>journey</title>
+</head>
+<body>
+<header id="header">
+	<h2>我的旅程</h2>
+</header>
+
+<section id="my-journey">
+	<div class="tabTitle"> 
+	    <span class="current">旅程单</span>
+	    <span>已完成</span>	 
+    </div>
+	<div class="tabContent" id="underway">
+         <ul>
+         	<li>
+         		<ul class="items">
+         		    <li class="clearfix">
+         		    	<svg class="icon-journey" aria-hidden="true">
+                           <use xlink:href="#icon-time"></use>
+                       </svg>
+                       <span>2014-03-31</span>
+         		    </li>
+         		    <li class="clearfix">
+         		    	<svg class="icon-journey" aria-hidden="true">
+                            <use xlink:href="#icon-destination"></use>
+                        </svg>
+                        <span>扬州</span>
+         		    </li>
+         		    <li class="clearfix">
+         		    	<svg class="icon-journey" aria-hidden="true">
+                            <use xlink:href="#icon-landlord"></use>
+                        </svg>
+                        <div class="profile"><img src="images/profile.jpg" alt=""></div>
+         		    </li>
+         			<li><a href="">查看房间</a></li>
+         		</ul>
+         	</li>
+         </ul>
+	</div>
+
+	<div class="tabContent none" id="finish">
+	     <ul>
+         	
+         </ul>
+	</div>
+</section>
+
+
+<section id="botFixed">
+<ul>
+	<li>
+		<a href="seek.html">
+	    <svg class="boticon" aria-hidden="true">
+	      <use xlink:href="#icon-search"></use>
+	    </svg>
+	   <p>探索</p>
+       </a>
+	</li>
+	<li>
+		<a href="wish.html">
+	    <svg class="boticon" aria-hidden="true">
+          <use xlink:href="#icon-like"></use>
+        </svg>
+	    <p>心愿单</p>
+        </a>
+	</li>
+	<li>
+		<a href="journey.html">
+	    <svg class="cur-svg" aria-hidden="true">
+          <use xlink:href="#icon-house"></use>
+        </svg>
+	    <p style="color: #ff5a5f;">旅程</p>
+        </a>
+	</li>
+	<li>
+		<a href="messages.html">
+	    <svg class="boticon" aria-hidden="true">
+            <use xlink:href="#icon-duihuakuan"></use>
+        </svg>
+	    <p>收件箱</p>
+        </a>
+	</li>
+	<li>
+		<a href="personal.php">
+	    <svg class="boticon" aria-hidden="true">
+          <use xlink:href="#icon-personal"></use>
+        </svg>
+	    <p>我的</p>
+         </a>
+	</li>
+</ul>
+</section>
+<script src="js/jquery.min.js"></script>	
+<script>
+	$(function(){
+		$(".tabTitle span").click(function(){
+			var index=$(".tabTitle span").index(this);
+			$(".tabContent").hide().eq(index).show();
+			$(".tabTitle span").removeClass("current").eq(index).addClass("current");
+		});
+	});
+
+	
+
+   $.getJSON ("json/will.txt", function (data)  {
+ 	var addHtml='';
+			$(data).each(function(){
+				addHtml+='<li>'
+				+'    <ul class="items"> '	
+				+'       <li class="clearfix">'
+				+'          <svg class="icon-journey" aria-hidden="true">'
+				+'              <use xlink:href="#icon-time"></use>'
+				+'          </svg>'
+				+'          <span>' + this.time + '</span>'
+				+'       </li>'
+				+'       <li class="clearfix">'
+				+'          <svg class="icon-journey" aria-hidden="true">'
+				+'              <use xlink:href="#icon-destination"></use>'
+				+'          </svg>'
+				+'          <span>' + this.destination + '</span>'
+				+'       </li>'
+				+'       <li class="clearfix">'
+				+'          <svg class="icon-journey" aria-hidden="true">'
+				+'              <use xlink:href="#icon-landlord"></use>'
+				+'          </svg>'
+				+'          <div class="profile"><img src=" ' + this.images + ' " alt=""></div>'
+				+'       </li>'
+				+'       <li>'
+				+'           <a href=" ' +this.href+ ' ">查看房间</a>'
+				+'       </li>'
+				+'    </ul>'			
+				+'</li>';
+			});
+			
+			$('#underway ul').append(addHtml);
+			
+});
+
+$.getJSON ("json/finish.txt", function (data)  {
+ 	var addHtml='';
+			$(data).each(function(){
+				addHtml+='<li>'
+				+'    <ul class="items"> '	
+				+'       <li class="clearfix">'
+				+'          <svg class="icon-journey" aria-hidden="true">'
+				+'              <use xlink:href="#icon-time"></use>'
+				+'          </svg>'
+				+'          <span>' + this.time + '</span>'
+				+'       </li>'
+				+'       <li class="clearfix">'
+				+'          <svg class="icon-journey" aria-hidden="true">'
+				+'              <use xlink:href="#icon-destination"></use>'
+				+'          </svg>'
+				+'          <span>' + this.destination + '</span>'
+				+'       </li>'
+				+'       <li class="clearfix">'
+				+'          <svg class="icon-journey" aria-hidden="true">'
+				+'              <use xlink:href="#icon-landlord"></use>'
+				+'          </svg>'
+				+'          <div class="profile"><img src=" ' + this.images + ' " alt=""></div>'
+				+'       </li>'
+				+'       <li>'
+				+'           <a href=" ' +this.href+ ' ">查看房间</a>'
+				+'       </li>'
+				+'    </ul>'			
+				+'</li>';
+			});
+			
+			$('#finish ul').append(addHtml);
+			
+});
+</script>
+</body>
+</html>

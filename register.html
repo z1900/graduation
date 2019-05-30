@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0, maximum-scale=1.0"">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/doUser.css">
+<script src="svg/iconfont.js"></script>
+<title>register</title>
+</head>
+<body>
+<div class="dou-wrap" >
+	<div class="dou-box" id="dou-box">
+		<div class="dou-title" id="dou-title">
+			<span class="dou-title-color">快速注册</span>
+			<span>快速登录</span>
+			<div class="switch-bottom"></div>
+		</div>
+
+		<div class="dou-register dou-switch">
+			<div class="register-err" id="error-Box">
+				<div id="userError"></div>
+				<div id="errorMessages">
+					<p>请注册</p>
+				</div>
+			</div>
+			<form id="dou-register" method="post">
+				<ul class="dou-register-form">
+					<li class="clearfix">
+						<label for="uname">用户名：</label>
+						<input type="text" name="uname" id="uname" placeholder="用户名4-10位 (不可修改)">
+					</li>
+					<li class="clearfix">
+						<label for="pwd">密码：</label>
+						<input type="password" name="pwd" id="pwd" placeholder="密码6-14位">
+					</li>
+					<li class="clearfix">
+						<label for="vpwd">确认密码：</label>
+						<input type="password" name="vpwd" id="vpwd" placeholder="确认密码">
+					</li>
+					<li class="clearfix">
+						<label for="verify">验证码：</label>
+						<input type="text" name="verify" id="verify" placeholder="验证码">
+					</li>
+					<li>
+						<img src="PHP/verifyCode.php" id="code-refresh" alt="">
+					</li>
+					<li>
+						<input type="button" value="注册" id="dou-register-submit">
+					</li>
+				</ul>	
+			</form>
+		</div>
+		<div class="dou-login dou-switch clearfix none">
+			<div class="login-err">
+				<p>请登录</p>
+			</div>
+			<form id="dou-login" method="post">
+				<ul class="dou-login-form">
+					<li class="clearfix">
+						<label for="username">用户名：</label>
+						<input type="text" name="username" id="username">
+					</li>
+					<li class="clearfix">
+						<label for="password">密码：</label>
+						<input type="password" name="password" id="password">
+					</li>
+					<li>
+						<input type="button" value="登录" id="dou-submit">
+					</li>
+				</ul>	
+			</form>
+		</div>
+		<div class="direct">
+			<a href="seek.html">暂不登录/注册</a>
+		</div>
+	</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/function.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+@charset "utf-8";
+body{
+	padding-top:50px;
+	font-size: 14px;
+	background:#efefef;
+}
+#header{
+	position: relative;
+	z-index: 9;
+}
+.header-fixed{
+	width: 100%;
+	height:50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #ffffff;
+}
+.h-messages{
+	position: absolute; 
+	right:1.1rem;
+	top:0rem;
+}
+.header-fixed p{
+	line-height: 50px;
+	text-align: center;
+	font-size:1rem;
+	font-weight:500;
+	letter-spacing: 2px;
+	color:#686868;
+}
+.back{
+	position: absolute;
+	top: 0.9rem;
+	left: 1rem;
+}
+.header-fixed .save{
+	position: absolute;
+	top: 0.9rem;
+	right: 1.1rem;
+}
+.header-fixed .save a{
+	color: #333;
+}
+#datum ul{
+	padding:0 1rem;
+	background:#fff;
+}
+#datum ul li{
+	border-bottom:1px solid #dfe0df;
+	padding:0.8rem 0;
+}
+#datum ul li:last-child{
+	border:none;
+}
+#datum ul p,span{
+	color: #5c5c5c;
+}
+#datum ul p{
+	float: left;
+}
+#datum ul span{
+	float: right;
+	padding-right: 0.3rem;
+}
+.revise{
+	line-height: 50px;
+	color: #686868;	
+	cursor: pointer
+}
+#skin-img{
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	height: 280px;
+}
+#skin-img #imgOne{
+	width:4rem;
+	position: absolute;
+	right: 0.6rem;
+	bottom: 1rem;
+	border: none;
+	z-index: 99;
+	opacity: 0;
+	cursor: pointer;
+	margin: 0;
+}
+.camera {
+	width: 2.8em; 
+	height: 2.8em;
+	vertical-align: -0.15em;
+	fill: #fff;
+	overflow: hidden;
+	position: absolute;
+	right: 1.3rem;
+	bottom: 0.7rem;
+	z-index: 9;
+	cursor: pointer;
+}
+.icon-h {
+	width: 1.5em; 
+	height: 1.5em;
+	vertical-align: -0.15em;
+	fill: #474747;
+	overflow: hidden;
+}
+#skin-img form>ul{
+	margin-top: 0px;
+}
+#skin-img form select, #skin-img form input[type='date'], #skin-img form input[type='email']{
+	width: 98%;
+	height: 30px;
+	display: block;
+	margin: 0 auto;
+	border: 0;
+}
+#skin-img form select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+#skin-img ul{
+	padding: 0 1rem;
+	background: #fff;
+}
+#skin-img ul>li{
+	border-bottom: 1px solid #dfe0df;
+	padding: 1rem 0;
+}
+#skin-img ul>li:last-child, #skin-img ul>li:nth-child(3){
+	border: none;
+}
+#skin-img ul>li:last-child{
+	display: none;
+}
+#skin-img ul label{
+	color: #5c5c5c;
+	display: block;
+	margin-bottom: 0.6rem;
+}
+
+
+.logout{
+	width: 100%;
+}
+.logout a{
+	display: block;
+	height: 41px;
+	width: 90%;
+	margin: 1.2rem auto;
+	text-align: center;
+	line-height: 41px;
+	background: #fd6a6f;
+	border-bottom: 3px solid #fd5056;
+	border-radius: 4px;
+	color: #fff;
+	letter-spacing: 4px;
+	font-size: 1rem;
+}

@@ -1,0 +1,52 @@
+﻿[
+	
+	{
+		"id":13,
+		"title":"嘉兴的整套房子-2位房客-1张床",
+		"price":"￥468",
+		"comment":"106条评价",
+		"images":"images/30.jpg",
+		"href":"room-details3.html"
+	},
+	{
+		"id":14,
+		"title":"大理的整套房子-2位房客-1张床",
+		"price":"￥468",
+		"comment":"106条评价",
+		"images":"images/31.jpg",
+		"href":"room-details3.html"
+	},
+	{
+		"id":15,
+		"title":"张家界的整套房子-2位房客-1张床",
+		"price":"￥468",
+		"comment":"106条评价",
+		"images":"images/32.jpg",
+		"href":"room-details3.html"
+	},
+	{
+		"id":16,
+		"title":"十堰的整套房子-2位房客-1张床",
+		"price":"￥468",
+		"comment":"106条评价",
+		"images":"images/33.jpg",
+		"href":"room-details3.html"
+	},
+	{
+		"id":17,
+		"title":"西双版纳的整套房子-2位房客-1张床",
+		"price":"￥468",
+		"comment":"106条评价",
+		"images":"images/34.jpg",
+		"href":"room-details3.html"
+	},
+	{
+		"id":18,
+		"title":"咸阳的整套房子-2位房客-1张床",
+		"price":"￥468",
+		"comment":"106条评价",
+		"images":"images/35.jpg",
+		"href":"room-details3.html"
+	}
+]
+

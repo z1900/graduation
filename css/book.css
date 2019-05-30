@@ -1,0 +1,342 @@
+ body{
+ 	padding: 50px 0;
+}
+ .bcIcon{
+ 	width: 1.5em; 
+ 	height: 1.5em;
+ 	vertical-align: -0.15em;
+ 	fill: rgb(71, 71, 71);
+    overflow: hidden;
+}
+.header{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-sizing: border-box;
+}
+.header .back{
+	height: 50px;
+	line-height: 50px;
+	position: absolute;
+	top: 0;
+	left: 1rem;
+}
+.bcCheckin{
+	padding: 0 0.6rem;
+}
+.bcCheckin .bcDate label{
+	display: none;
+}
+.bcCheckin .bcDate{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	border-top: 1px solid #EBEBEB;
+	border-bottom: 1px solid #EBEBEB;
+	padding: 5px 0;
+}
+.bcCheckin .bcDate input[type='text']{
+	border: none;
+	background: rgba(0,0,0,0);
+	text-align: center;
+	width: 40%;
+	color: #666;
+}
+.bcCheckin .bcDate p{
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+	color: #666;
+}
+.bcCheckin .bcDate input[type='text'], .bcCheckin .bcDate p{
+	height: 40px;
+	line-height: 40px;
+	font-size: 1rem;
+}
+.bcCheckin .bcHeader{
+	width: 100%;
+	text-align: center;
+	padding: 15px 0;
+}
+.bcCheckin .bcHeader h3{
+	color: #474747;
+	font-size: 1.1rem;
+}
+.bcCheckin .roomHost{
+	padding: 15px 0.6rem;
+
+}
+.bcCheckin .roomHost .roomHostProfile img{
+	width: 100%;
+}
+.bcCheckin .roomHost .roomHostProfile{
+	width: 60px;
+	height: 60px;
+	border-radius: 100%;
+	overflow: hidden;
+	float: right;
+}
+.bcCheckin .roomHost .roomHostName h2{
+	font-size: 1.05rem;
+	font-weight: normal;
+	color: #474747;
+}
+.bcCheckin .roomHost .roomHostName h3{
+	display: inline;
+	color: #6d6d6d;
+	font-size: 1rem;
+	font-weight: normal;
+}
+.bcCheckin .roomHost .roomHostName span{
+	color: #00a698;
+	font-size: 1rem;
+}
+.bcCheckin .bcDay ul{
+	padding: 0 0.6rem;
+}
+.bcCheckin .bcDay ul>li{
+	border-bottom: 1px solid #EBEBEB;
+	padding: 15px 0;
+}
+.bcCheckin .bcDay ul>li label{
+	font-size: 1rem;
+	color: #6d6d6d;
+}
+.bcCheckin .bcDay ul>li select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	width: 40%;
+	float: right;
+	direction: rtl;
+	font-size: 1rem;
+	color: #6d6d6d;
+	margin-right: 0.6rem;
+}
+.bcCheckin .bcDay ul>li h2{
+	font-size: 1rem;
+	font-weight: normal;
+	color: #6d6d6d;
+	display: inline;
+}
+.bcCheckin .bcDay ul>li h3{
+	font-size: 0.9rem;
+	color: #474747;
+	margin-bottom: 6px;
+}
+.bcCheckin .bcDay ul>li p{
+	color: #6d6d6d;
+	font-size: 0.9rem;
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	text-indent: 2em;
+}
+.bcCheckin .bcDay .bcRulesRead{
+	color: #00a698;
+	float: right;
+	cursor: pointer;
+	font-size: 1rem;
+	margin-right: 0.6rem;
+}
+.bcCheckin .bcSum{
+	float: right;
+	margin: 15px 0.6rem 15px 0;
+}
+.bcCheckin .bcSum h2, sup{
+	color: #474747;
+}
+.bcCheckin .bcSum sup{
+	font-weight: normal;
+	font-size: 1rem;
+}
+.footer{
+	width: 100%;
+	height: 50px;
+	border-top: 1px solid #EBEBEB;
+	background: #fff;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+}
+.footer .bcPay{
+	width: 90%;
+	height: 40px;
+	display: inline-block;
+	background: #FF595F;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -45%;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.footer .bcPay p{
+	font-size: 1rem;
+	color: #fff;
+	letter-spacing: 5px;
+}
+.payMask{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	display: none;
+}
+.payMask .payBox{
+	width: 90%;
+	margin: 9rem auto 0;
+	background: #fff;
+	box-shadow: 0 0 2px 0 #fcfcfc;
+	border-radius: 2px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.payMask .payBox .payText{
+	width: 100%;
+	text-align: center;
+}
+.payMask .payBox .payText h3{
+	color: #474747;
+	font-size: 1rem;
+	font-weight: normal;
+	padding: 8px 0;
+	border-bottom: 1px solid #ccc;
+}
+.payMask .payBox .payText h2{
+	color: #474747;
+	padding: 15px 0;
+}
+.payMask .payBox .payText h2 sup{
+	font-weight: normal;
+	font-size: 1rem;
+}
+.payMask .payBox .payCancel,
+.payMask .payBox .payConfirm{
+	width: 50%;
+	box-sizing: border-box;
+	height: 38px;
+	line-height: 38px;
+	border-top: 1px solid #ccc;
+	cursor: pointer;
+	text-align: center;
+	font-size: 1rem;
+}
+.payMask .payBox .payCancel{
+	border-right: 1px solid #ccc;
+	color: #828282;
+}
+.payMask .payBox .payConfirm{
+	color: #0da4f1
+}
+
+.paidMask{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #fff;
+	display: none;	
+}
+.paidMask .paidBox{
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 10rem;
+}
+.paidMask .paidBox .paidText{
+	text-align: center;
+}
+.paidMask .paidBox .paidText p{
+	font-size: 1rem;
+	color: #474747;
+	margin-bottom: 5px;
+}
+.paidMask .paidBox .paidText p>a{
+	color: #00a698;
+}
+.rules-icon {
+	width: 1.9em; 
+	height: 1.9em;
+	vertical-align: -0.15em;
+	fill: #474747;
+	overflow: hidden;
+	margin: 0.6rem 0 0 0.6rem;
+}
+.rulesMask{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.rulesMask .rulesHeader{
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	border-bottom: 1px solid #ebebeb;
+}
+.rulesMask .rulesDetails .detailsHeader{
+	padding: 0 0.8rem;
+	margin: 2rem 0;
+}
+.rulesMask .rulesDetails .detailsHeader h2{
+	font-size: 1.1rem;
+	color: #474747;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.rulesMask .rulesDetails .detailsHeader p{
+	font-size: 1rem;
+	color: #6d6d6d;
+}
+.rulesMask .rulesDetails ul{
+	padding: 0 0.8rem;
+}
+.rulesMask .rulesDetails ul>li{
+	font-size: 1rem;
+	color: #474747;
+	padding: 1rem 0;
+	border-bottom: 1px solid #ebebeb;
+}
+.rulesMask .rulesAgree{
+	position: fixed;
+	height: 50px;
+	width: 100%;
+	background: #fff;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid #ebebeb;
+}
+.rulesMask .rulesAgree>span{
+	display: inline-block;
+	letter-spacing: 6px;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	font-size: 1rem;
+	position: absolute;
+	width: 90%;
+	height: 40px;
+	background: #ff595f;
+	border-radius: 3px;
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -45%;
+}

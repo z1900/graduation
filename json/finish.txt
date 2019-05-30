@@ -1,0 +1,25 @@
+﻿[
+	
+	{
+		"id":1,
+		"time":"2015-12-18",
+		"destination":"厦门",
+		"images":"images/39.jpg",
+		"href":"room-details.html"
+	},	
+	{
+		"id":2,
+		"time":"2014-02-26",
+		"destination":"无锡",
+		"images":"images/40.jpg",
+		"href":"room-details.html"
+	},
+	{
+		"id":3,
+		"time":"2013-03-18",
+		"destination":"chengdu",
+		"images":"images/41.jpg",
+		"href":"room-details.html"
+	}
+]
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0, maximum-scale=1.0"">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/normalize3.0.2.min.css" />
+<link href="css/mobiscroll_date.css" rel="stylesheet" />
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/book.css">
+<script src="svg/iconfont.js"></script>
+<title>book</title>
+</head>
+<body>
+<header class="header" id="bcheader">
+	<div class="back">
+		<a href="room-details.html">
+			<svg class="bcIcon" aria-hidden="true">
+				<use xlink:href="#icon-back"></use>
+			</svg>
+		</a>
+	</div>
+</header>
+
+<section class="bcCheckin clearfix">
+	<div class="bcHeader">
+		<h3>预定复旦五角商城的LOFT电梯公寓</h3>
+	</div>
+	<div class="roomHost">
+		<ul>
+			<li>
+				<div class="roomHostProfile">
+					<img src="images/46.jpg" alt="">
+				</div>
+				<div class="roomHostName">
+					<h2>独立房间</h2>
+					<h3>房东：</h3>
+					<span>Rodney</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<form class="bcDate">
+		<label for="bcStartDate">入住日期：</label>
+		<input type="text" name="bcStartDate" id="bcStartDate" placeholder="入住日期">
+		<p>/</p>
+		<label for="bcEndDate"></label>
+		<input type="text" name="bcEndDate" id="bcEndDate" placeholder="离开日期">
+	</form>
+
+	<form class="bcDay">
+		<ul>
+			<li class="clearfix" id="triPerson">
+				<label for="bcPerson">房客人数</label>
+				<select name="bcPerson" id="bcPerson">
+					<option value="">1</option>
+					<option value="">2</option>
+					<option value="">3</option>
+					<option value="">4</option>
+				</select>
+			</li>
+			<li>
+				<h3>可部分退款</h3>
+				<p>
+					当地时间提前一个月取消本次行程可获得本次行程的70%退款。如果在该时间后至行程开始前取消，将只能退换清洁费和服务费。
+				</p>
+			</li>
+			<li>
+				<h2>《房屋规则》</h2>
+				<span class="bcRulesRead" id="bcRulesRead">阅读</span>
+			</li>
+		</ul>
+	</form>
+		<div class="bcSum">
+			<h2><sup>CNY</sup>￥2,039</h2>
+		</div>
+</section>
+
+<footer class="footer">
+	<div class="bcPay" id="roomApply">
+		<p>申请预定</p>
+	</div>
+</footer>
+
+<div class="rulesMask" id="rulesMask">
+	<div class="rulesHeader">
+		<svg class="rules-icon" id="rules-close" aria-hidden="true">
+			<use xlink:href="#icon-close"></use>
+		</svg>
+	</div>
+	<div class="rulesDetails">
+		<div class="detailsHeader">
+			<h2>预定复旦五角商城的电梯公寓</h2>
+			<p>当您入住本站房屋时，您住的是别人家。您需要先同意Rodney的《房屋规则》才能预定。</p>
+		</div>
+		 <ul>
+		 	<li>禁止吸烟</li>
+		 	<li>不适合宠物</li>
+		 	<li>不允许举办派对和活动</li>
+		 	<li>可能对儿童（0-12岁）不安全或不适合</li>
+		 	<li>入住时间是14:00以后</li>
+		 </ul>
+		 <div class="rulesAgree" id="rulesAgree">
+		 	<span>同意</span>
+		 </div>
+	</div>
+</div>
+
+<div class="payMask" id="payMask"> 
+	<div class="payBox">
+		<div class="payText">
+			<h3>请付款</h3>
+			<h2><sup>CNY</sup>￥2,039</h2>
+		</div>
+		<div class="payCancel" id="payCancel">放弃</div>
+		<div class="payConfirm" id="payConfirm">支付</div>
+	</div>
+</div>
+
+<div class="paidMask" id="paidMask">
+	<div class="paidBox">
+		<div class="paidText">
+			<p>付款成功，我们会尽快与房东联系，感谢您的使用！</p>
+			<p><span id="countdown"></span>秒后返回<a href="seek.html">首页</a></p>
+		</div>
+	</div>
+</div>
+
+ 
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/mobiscroll_date.js" charset="gb2312"></script> 
+<script src="js/mobiscroll.js"></script> 
+<script src="js/function.js"></script>
+<script>
+	$(document).ready(function(){
+
+		function datePick(which){
+			var currYear = (new Date()).getFullYear();	
+			var opt={};
+			opt.date = {preset : 'date'};
+			opt.datetime = {preset : 'datetime'};
+			opt.time = {preset : 'time'};
+			opt.default = {
+				theme: 'android-ics light', //皮肤样式
+				display: 'modal', //显示方式 
+				mode: 'scroller', //日期选择模式
+				dateFormat: 'yyyy-mm-dd',
+				lang: 'zh',
+				showNow: true,
+				nowText: "今天",
+				startYear: currYear - 50, //开始年份
+				endYear: currYear + 10 //结束年份
+		};
+
+		$(which).mobiscroll($.extend(opt['date'], opt['default']));
+	}
+
+	datePick("#bcStartDate");
+	datePick("#bcEndDate");
+
+})
+</script>
+</body>
+</html>

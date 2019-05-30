@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0, maximum-scale=1.0"">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="../images/favicon.ico"/>
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="css/admin.css">
+<title>adminLogin</title>
+</head>
+<body>
+	<div class="loginBox">
+		<div class="loginHeader">后台管理系统</div>
+		<div class="loginError" id="bloginError"><p>welcome!</p></div>
+		<form method="post" class="loginForm" id="bloginForm">
+			<ul>
+				<li>
+					<label for="username">用户名：</label>
+					<input type="text" name="username" id="username" placeholder="用户名">
+				</li>
+				<li>
+					<label for="password">密码：</label>
+					<input type="password" name="password" id="password" placeholder="密码">
+				</li>
+				<li>
+					<span class="loginSubmit" id="bloginSubmit">登录</span>
+				</li>
+			</ul>
+		</form>
+	</div>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/ajax.js"></script>
+<script src="../js/function.js"></script>
+</body>
+</html>

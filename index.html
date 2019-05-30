@@ -1,0 +1,68 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0, maximum-scale=1.0"">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="keywords" content="旅游短租、旅游日租、民宿、旅游、旅游住宿">
+<meta name="description" content="日租房、民宿等短租日租房源预订。旅途中的家，体验高性价比、多样化、的住宿。">
+<link rel="shortcut icon" href="images/favicon.ico"/>
+<link rel="stylesheet" href="css/layout.css">
+<script src="svg/iconfont.js"></script>
+<title>openAnimation</title>
+<style>
+#spinner{
+	width: 100%;
+	height: 100%;
+	background: #f4f4f4;
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+}
+.boticon {
+	width:6.4em; 
+	height:6.4em;
+	vertical-align: -0.15em;
+	fill: #e4e4e4;
+	overflow: hidden;
+	animation: change 4s ease-out;
+}
+#logo{
+	width: 5.4rem;
+	height: 5.4rem;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -2.7rem;
+    margin-top: -2.7rem;
+}
+@keyframes change{
+	0%{fill: #e4e4e4;}
+	30%{fill: #e4e4e4;}
+	60%{fill: #e4e4e4;}
+	80%{fill: #ff5a5f;}
+	100%{fill: #ff5a5f;}
+}
+</style>
+</head>
+<body>
+<div id="spinner">
+<div id="logo">
+	<svg class="boticon" aria-hidden="true">
+      <use xlink:href="#icon-house"></use>
+    </svg>
+</div>
+</div>
+
+<script>
+setTimeout("guochang()",5000);
+function guochang(){
+	location.href="register.html";
+}
+</script>
+</body>
+</html>

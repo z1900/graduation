@@ -1,0 +1,65 @@
+@charset "utf-8";
+body{
+	padding-bottom: 55px;
+}
+#header{
+	height: 100%;
+	height: 75px;
+	margin: 20px 0;
+}
+#header>p{
+	text-align: center;
+	line-height: 70px;
+}
+#header>p a{
+	color: #777777;
+	font-size: 1.4rem;
+}
+#header .login-success{
+	padding: 0.8rem 1.6rem 0;
+}
+#header .login-success .uname{
+	float: left;
+	margin-top: 0.3rem;
+}
+#header .login-success .uname p a{
+	color: #777777;
+}
+#header .login-success .uname h1{
+	color: #474747;
+	font-size: 1.8rem;
+}
+#header .login-success .profile{
+	float: right;
+}
+#header .login-success .profile{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+#header .login-success .profile img{
+	width: 100%;
+}
+
+
+#function .ifunction{
+	width: 1.9em; 
+    height: 1.9em;
+    vertical-align: -0.15em;
+    fill: #808080;
+    overflow: hidden;
+    float: right;
+}
+#function ul p{
+	font-size: 1rem;
+	color: #808080;
+}
+#function ul{
+	padding: 0 1.6rem;
+}
+#function ul li{
+	border-bottom: 1px solid #dbdbdb;
+	padding: 1.1rem 0;
+	width: 100%;
+}

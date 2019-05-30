@@ -1,0 +1,52 @@
+﻿[
+	
+	{
+		"id":7,
+		"title":"大连的整套房子-6位房客-6张床",
+		"price":"￥3078",
+		"comment":"136条评价",
+		"images":"images/24.jpg",
+		"href":"room-details2.html"
+	},
+	{
+		"id":8,
+		"title":"镇江的整套房子-4位房客-2张床",
+		"price":"￥613",
+		"comment":"106条评价",
+		"images":"images/25.jpg",
+		"href":"room-details2.html"
+	},
+	{
+		"id":9,
+		"title":"厦门的整套房子-2位房客-1张床",
+		"price":"￥786",
+		"comment":"450条评价",
+		"images":"images/26.jpg",
+		"href":"room-details2.html"
+	},
+	{
+		"id":10,
+		"title":"西安的整套房子-4位房客-2张床",
+		"price":"￥735",
+		"comment":"167条评价",
+		"images":"images/27.jpg",
+		"href":"room-details2.html"
+	},
+	{
+		"id":11,
+		"title":"昆明的整套房子-3位房客-1张床",
+		"price":"￥1078",
+		"comment":"95条评价",
+		"images":"images/28.jpg",
+		"href":"room-details2.html"
+	},
+	{
+		"id":12,
+		"title":"扬州的整套房子-2位房客-1张床",
+		"price":"￥468",
+		"comment":"106条评价",
+		"images":"images/29.jpg",
+		"href":"room-details2.html"
+	}
+]
+

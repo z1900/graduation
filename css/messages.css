@@ -1,0 +1,68 @@
+@charset "utf-8";
+body{
+	background: #f0f0f0;
+	padding-bottom: 50px;
+}
+#dialogue img{
+	width: 100%;
+}
+#dialogue .profile{
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	overflow: hidden;
+	float: left;
+	margin: 0 0rem 0 0;
+}
+#dialogue ul{
+	padding: 0 0.8rem;
+}
+#dialogue ul li{
+	position: relative;
+	border-bottom: 1px solid #dbdcdb;
+	padding: 1rem 0;
+}
+.hold{
+	position: absolute;
+	top: 0.6rem;
+	left: 58px;
+	overflow: hidden;
+	width: 77%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#dialogue .hold h2{
+	font-weight: normal;
+	font-size: 1rem;
+	color: #43484a;
+	letter-spacing: 1px;
+}
+#dialogue .hold p{
+	color: #464b4d;
+	font-size: 0.9rem;
+	text-overflow: ellipsis;
+	
+}
+#dialogue .hold span{
+	color: #7dda63;
+	font-size: 0.8rem;
+	letter-spacing: 2px;
+}
+#dialogue li:last-child .hold span{
+	color: #71797d;
+	font-size: 0.8rem;
+	letter-spacing: 2px;
+}
+#dialogue li:first-child{
+	display: none;
+}
+#dialogue em{
+	font-style: normal;
+	position: absolute;
+	top: 0.6rem;
+	right: 0rem;
+	color: #a1a6a8;
+	font-size: 0.8rem;
+	letter-spacing: 1px;
+}
+

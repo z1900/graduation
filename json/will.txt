@@ -1,0 +1,25 @@
+﻿[
+	
+	{
+		"id":1,
+		"time":"2016-12-18",
+		"destination":"上海",
+		"images":"images/36.jpg",
+		"href":"room-details.html"
+	},	
+	{
+		"id":2,
+		"time":"2017-01-01",
+		"destination":"成都",
+		"images":"images/37.jpg",
+		"href":"room-details.html"
+	},
+	{
+		"id":3,
+		"time":"2017-03-18",
+		"destination":"扬州",
+		"images":"images/38.jpg",
+		"href":"room-details.html"
+	}
+]
+

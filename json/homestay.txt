@@ -1,0 +1,39 @@
+﻿[
+	{
+		"id":1,
+		"title":"纽约老友记，一间民宿一部剧",
+		"images":"images/1.jpg",
+		"href":"homestay.html"
+	},
+	{
+		"id":2,
+		"title":"住进首尔市中心的民宿，出门走两步就能疯狂",
+		"images":"images/2.jpg",
+		"href":"homestay.html"
+	},
+	{
+		"id":3,
+		"title":"超适合情侣的民宿，从公寓到树屋，从船屋到私人小岛...",
+		"images":"images/3.jpg",
+		"href":"homestay.html"
+	},
+	{
+		"id":4,
+		"title":"适合一群人出去玩的10个房子",
+		"images":"images/4.jpg",
+		"href":"homestay.html"
+	},
+	{
+		"id":5,
+		"title":"洛杉矶这十家民宿，满足你对这座城市所有的幻想！",
+		"images":"images/5.jpg",
+		"href":"homestay.html"
+	},
+	{
+		"id":6,
+		"title":"他回到家乡，在树林中改造了一间带瀑布的小屋",
+		"images":"images/6.jpg",
+		"href":"homestay.html"
+	}
+]
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0, maximum-scale=1.0"">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/comment.css">
+<script src="js/jquery.min.js"></script>
+<script src="svg/iconfont.js"></script>
+<title>comment</title>
+</head>
+<body>
+<header id="header">
+	<a href="room-details.html">
+		<svg class="back-icon" aria-hidden="true">
+            <use xlink:href="#icon-back"></use>
+        </svg>	
+	</a>
+</header>
+<div id="comment">
+<h3>全部评价</h3>
+   <ul>
+      <li>
+         <div class='p-header'>
+          <span class='p-user'></span>
+          <span class='p-time'></span>
+         </div>
+         <div class='p-content'></div>
+         <div class='p-footer'>
+             <span class='zan'>赞</span>
+             <span class='num'>0</span>
+             <span class='huifu'>回复</span>
+         </div>
+         <div class='cm'>             
+             <textarea></textarea>
+             <button>发表评论</button>
+         </div>
+      </li>
+   </ul>
+<div id="ch" class="clearfix">
+         <textarea></textarea>
+         <button id="btnc">评论</button>
+     </div>
+</div>
+
+
+
+<script>
+var cm=[{"user":"Achilles","time":" 2016/9/15 下午5:19:05","content":"房间整洁，也很大，很安静！","num":223},
+      {"user":"Vania","time":" 2016/8/13 上午9:23:02","content":"交通便利，靠近地铁站，房东很好！","num":223}];
+ var cm2={"user":"Candy","time":" 2016/7/31 下午6:12:00","content":"一次不错的体验，下次还会再来！","num":223};
+ cm.push(cm2);
+
+
+   var cb=$("#comment>ul>li:first");
+   $.each (cm, function (i, item)  
+            { 
+                insert(i)              
+             })
+
+   $("#comment>ul>li .huifu").click(function(){
+    $("#comment .cm").hide();
+    $(this).parent().next().show();
+   })
+ $("#comment>ul>li button").click(function(){
+    var mydate = new Date();
+    var t1=mydate.toLocaleString();
+    var nr=$(this).prev().val();
+    var cm2={"user":"Adma","time":t1,"content":nr,"num":0};
+    cm.push(cm2);
+    console.log(cm.length);
+    insert(cm.length-1);
+   })
+ $("#comment #btnc").click(function(){
+ 	var mydate = new Date();
+  var t2=mydate.toLocaleString();
+ 	var pnr=$(this).prev().val();
+ 	var cm2={"user":"John","time":t2,"content":pnr,"num":0};
+ 	cm.push(cm2);
+ 	console.log(cm.length);
+    insert(cm.length-1);
+ })
+
+$("#comment>ul>li .zan").click(function(){
+    var zan=parseInt($(this).next().text());
+    $(this).next().text(zan+1);
+})
+
+function insert(i)
+{console.log(i);
+    if(i>0)
+               {
+                var cn=cb.clone(true)
+               cb.after(cn);
+               cb=cb.next();
+               }
+
+cb.find(".p-user").text(cm[i].user).next().text(cm[i].time).parent().next().text(cm[i].content);
+}
+</script>
+</body>
+</html>

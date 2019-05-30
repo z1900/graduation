@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0, maximum-scale=1.0"">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="images/favicon.ico"/>
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/homestay.css">
+<script src="svg/iconfont.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<title>travel-story</title>
+</head>
+<body>
+<header id="header">
+	<a href="seek.html">
+		<svg class="r-icon fixed1" aria-hidden="true">
+            <use xlink:href="#icon-back"></use>
+        </svg>
+	</a>
+	<a href="javascript:;">
+		<svg class="r-icon fixed3" aria-hidden="true">
+            <use xlink:href="#icon-share"></use>
+        </svg>
+	</a>
+</header>
+<section id="bgi">
+	<div class="bgimg"><img src="images/7.jpg" alt=""></div>
+	<div class="introduce">
+		<span>旅行故事 Alina 2016-11-08</span>
+		<h2>我居然只花了600块，住进了一万多平米的摩洛哥豪宅</h2>
+		<p>这篇故事的主角予琪，在看到摩洛哥免签的消息之后，按捺不住心中的狂热，立马辞职定了飞往摩洛哥的机票。她在摩洛哥住的那些房子，就像走进了一千零一夜里的故事一样美好……</p>
+	</div>
+</section>
+
+
+<section id="content1" class="recommend">
+<h2>1、当里弄洋房邂逅榻榻米</h2>
+	<ul>
+		<li>		
+			<img src="" alt="">
+			<p></p>			
+		</li>
+	</ul>
+</section>
+
+
+<section id="bottom-nav">
+	<div class="more">
+		<h2>更多上海民俗</h2>
+		<p>300+套房源·均价￥380/晚</p>
+	</div>
+	<div class="view"><a href="javascript:;">查看</a></div>
+</section>
+
+<script>
+//header
+$(window).scroll(function(){
+	var h=$(document).scrollTop();
+	var h2=$(".bgimg").height();
+	if(h>=h2){
+		$("#header").css({"background":"#fff","border-bottom":"1px solid #e5e5e5"})
+		$(".r-icon").css("fill","#474747")
+	}else{
+		$("#header").css({"background":"","border":""})
+		$(".r-icon").css("fill","#fff")
+	}
+})
+
+//json
+$.getJSON("json/jstory1.txt",function(data){
+	var addHtml=''
+	$(data).each(function(){
+		addHtml+='<li>'
+		+'    <img src=" '+ this.images+' " alt="">'
+		+'    <p> '+this.content+' </p>'
+		+'</li>'
+	})
+	$("#content1 ul").append(addHtml);
+})
+
+
+</script>
+</body>
+</html>

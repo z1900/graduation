@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="keywords" content="旅游短租、旅游日租、民宿、旅游、旅游住宿">
+<meta name="description" content="日租房、民宿等短租日租房源预订。旅途中的家，体验高性价比、多样化、的住宿。">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/botFixed.css">
+<link rel="stylesheet" href="css/seek.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="svg/iconfont.js"></script>
+<title>seek</title>
+</head>
+<body>
+<header id="header">
+	<form id="ss" name="ss">
+        <input type="text" class="search_key"  placeholder="想去哪里？" />
+        <input type="button" class="submit"  value="">
+    </form>
+</header>
+
+
+
+<section id="room-recommend">
+	<h2>民宿推荐</h2>
+	<div class="swiper-container" id="homestay">
+            <ul class="swiper-wrapper">
+        	<li class="swiper-slide"><a href="">
+            <img src="" alt="">
+            <h3></h3>
+            </a></li>
+            </ul>
+    </div>
+</section>
+
+<section id="room-recommend">
+	<h2>旅行故事</h2>
+	<div class="swiper-container" id="travel">
+            <ul class="swiper-wrapper">            
+        	<li class="swiper-slide"><a href="">
+            <img src="" alt="">
+            <h3></h3>
+            </a></li>            
+            </ul>
+    </div>
+</section>
+
+<section id="room-recommend">
+	<h2>房东故事</h2>
+	<div class="swiper-container" id="landlord">
+            <ul class="swiper-wrapper">           
+        	<li class="swiper-slide"><a href="">
+            <img src="" alt="">
+            <h3></h3>
+            </a></li>
+            </ul>
+    </div>
+</section>
+
+<section id="room-surf">
+	<h2>浏览精选</h2>
+	<ul>
+		<li>
+			<a href="">
+				<img src="" alt="">
+				<p></p>
+				<h3> </h3>
+				<span class="vote-star star"><i></i></span>
+				<em></em>
+			</a>
+			<svg class="xin" aria-hidden="true" id="pink">
+	          <use xlink:href="#icon-xin"></use>
+	    </svg>
+		</li>
+	</ul>
+<div id="load"><span>查看更多</span></div>
+</section>
+<footer>
+	<p>14110510203 张连浩 All Right Reserved</p>
+    <p>计算机14102</p>
+</footer>
+
+
+
+
+<section id="botFixed">
+<ul>
+  <li>
+    <a href="seek.html">
+      <svg class="cur-svg" aria-hidden="true">
+        <use xlink:href="#icon-search"></use>
+      </svg>
+     <p style="color: #ff5a5f;">探索</p>
+       </a>
+  </li>
+  <li>
+    <a href="wish.html">
+      <svg class="boticon" aria-hidden="true">
+          <use xlink:href="#icon-like"></use>
+        </svg>
+      <p>心愿单</p>
+        </a>
+  </li>
+  <li>
+    <a href="journey.html">
+      <svg class="boticon" aria-hidden="true">
+          <use xlink:href="#icon-house"></use>
+        </svg>
+      <p>旅程</p>
+        </a>
+  </li>
+  <li>
+    <a href="messages.html">
+      <svg class="boticon" aria-hidden="true">
+            <use xlink:href="#icon-duihuakuan"></use>
+        </svg>
+      <p>收件箱</p>
+        </a>
+  </li>
+  <li>
+    <a href="personal.php">
+      <svg class="boticon" aria-hidden="true">
+          <use xlink:href="#icon-personal"></use>
+        </svg>
+      <p>我的</p>
+         </a>
+  </li>
+</ul>
+</section>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script>
+//touch事件
+var startX = 0, startY = 0;  
+
+    function touchSatrtFunc(evt) {  
+                         
+            var touch = evt.touches[0];  
+            var x = Number(touch.pageX);  
+            var y = Number(touch.pageY); 
+            startX = x;  
+            startY = y;  
+        }  
+      
+    function touchMoveFunc(evt) {  
+                           
+            var touch = evt.touches[0]; 
+            var x = Number(touch.pageX); 
+            var y = Number(touch.pageY); 
+            var sl=document.getElementById("header");
+
+            if (y - startY > 0) 
+            {  
+                  sl.style.display="block";
+            }  
+            if (y - startY < 0) 
+            {
+                sl.style.display="none";
+            }
+       
+    }  
+
+    function touchEndFunc(evt) { }  
+
+    function bindEvent() {  
+        document.addEventListener('touchstart', touchSatrtFunc, false);  
+        document.addEventListener('touchmove', touchMoveFunc, false);  
+        document.addEventListener('touchend', touchEndFunc, false);  
+    }  
+    bindEvent(); 
+
+//Swiper
+var swiper = new Swiper('.swiper-container', {        
+        slidesPerView: 1.15,
+        centeredSlides: true,
+        paginationClickable: true,
+        spaceBetween: 10,
+        observer:true,
+        observeParents:true
+    });
+//json
+$.getJSON ("json/homestay.txt", function (data){  
+   for(i=0;i<data.length;i++){
+     if(i>0){
+      var mb=$("#homestay>ul>li:first").clone(true);
+      $("#homestay>ul").append(mb);	
+    }
+		$("#homestay>ul>li").eq(i).find("a").attr("href",data[i].href).children("img").attr("src",data[i].images).next("h3").text(data[i].title)
+      }
+});
+$.getJSON ("json/travel.txt", function (data)  
+        {  
+
+   for(i=0;i<data.length;i++){
+      	if(i>0)
+      	{
+      		var mb=$("#travel>ul>li:first").clone(true);
+      		$("#travel>ul").append(mb);	
+      	}
+		$("#travel>ul>li").eq(i).find("a").attr("href",data[i].href).children("img").attr("src",data[i].images).next("h3")
+		.text(data[i].title)
+
+      }
+        });
+$.getJSON ("json/landlord.txt", function (data)  
+        {  
+
+   for(i=0;i<data.length;i++){
+      	if(i>0)
+      	{
+      		var mb=$("#landlord>ul>li:first").clone(true);
+      		$("#landlord>ul").append(mb);	
+      	}
+		$("#landlord>ul>li").eq(i).find("a").attr("href",data[i].href).children("img").attr("src",data[i].images).next("h3")
+		.text(data[i].title)
+
+      }
+        });
+//svg
+$("#pink").click(function () {
+		var bc="#ff5a5f";
+		var cc= $(this).css("fill"); 
+		if(bc!=cc)
+		{
+			$(this).css("fill",bc); 
+		}
+		else
+		{
+			$(this).css("fill",cc);
+		}
+});
+//surf
+var information;
+var cb=$("#room-surf>ul>li:first");
+   var jsonfile=1;
+   var filecount=3;
+   load(1,0);
+
+ function load(xuhao,first)
+ {   
+     $.getJSON('json/'+xuhao+'.txt',function(data){
+         $.each (data, function (i, item)  
+            {    
+                insert(item,i,first);              
+             })
+         information=data;
+     })
+ }            
+                                      
+function insert(item,i,first)
+{
+  if(i>0||first){
+    var cn=cb.clone(true)
+    $("#room-surf>ul").append(cn);
+  }
+
+$("#room-surf>ul>li:last").find("a").attr("href",item.href).children("img").attr("src",item.images).next("p").text(item.price)
+.next("h3").text(item.title).next().next("em").text(item.comment);
+
+
+}
+
+$("#load").click(function(){
+     jsonfile++;
+    load(jsonfile,1);
+    if(jsonfile==3)$("#load").text("已显示所有");
+})
+
+//search
+$("#ss input:eq(1)").click(function(){
+    var data=information;
+    var j=-1;
+   var lif=$("#room-surf>ul>li:first").clone(true)
+   $("#room-surf>ul>li").remove();
+   
+    for(var i=0;i<data.length;i++)     
+      {   
+	 var ok=data[i].title.indexOf($("#ss .search_key").val())		
+  
+	 	           
+      		if(ok>=0){
+      		$("#room-surf>ul").append(lif);
+      		lif=$("#room-surf>ul>li:first").clone(true);	
+            j++;
+			
+$("#room-surf>ul>li").eq(j).find("a").attr("href",data[i].href).children("img").attr("src",data[i].images).next("p").text(data[i].price).next("h3").text(data[i].title).next().next("em").text(data[i].comment);
+
+      	}  
+      } 
+
+   } )  
+</script>	
+</body>
+</html>

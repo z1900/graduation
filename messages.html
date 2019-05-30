@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0, maximum-scale=1.0"">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/botFixed.css">
+<link rel="stylesheet" href="css/messages.css">
+<script src="svg/iconfont.js"></script>
+<title>messages</title>
+</head>
+<body>
+
+<section id="dialogue">
+	<ul>
+		<li class="clearfix">		
+			<div class="profile">
+				<img src="" alt="">
+			</div>
+			<div class="hold">
+				<a href=""><h2></h2></a>
+				<a href=""><p></p></a>
+				<a href=""><span></span></a>
+			</div>
+			<em></em>		
+		</li>
+	</ul>
+</section>
+
+
+<section id="botFixed">
+<ul>
+	<li>
+		<a href="seek.html">
+	    <svg class="boticon" aria-hidden="true">
+	      <use xlink:href="#icon-search"></use>
+	    </svg>
+	   <p>探索</p>
+       </a>
+	</li>
+	<li>
+		<a href="wish.html">
+	    <svg class="boticon" aria-hidden="true">
+          <use xlink:href="#icon-like"></use>
+        </svg>
+	    <p>心愿单</p>
+        </a>
+	</li>
+	<li>
+		<a href="journey.html">
+	    <svg class="boticon" aria-hidden="true">
+          <use xlink:href="#icon-house"></use>
+        </svg>
+	    <p>旅程</p>
+        </a>
+	</li>
+	<li>
+		<a href="messages.html">
+	    <svg class="cur-svg" aria-hidden="true">
+            <use xlink:href="#icon-duihuakuan"></use>
+        </svg>
+	    <p style="color: #ff5a5f;">收件箱</p>
+        </a>
+	</li>
+	<li>
+		<a href="personal.php">
+	    <svg class="boticon" aria-hidden="true">
+          <use xlink:href="#icon-personal"></use>
+        </svg>
+	    <p>我的</p>
+         </a>
+	</li>
+</ul>
+</section>
+<script src="js/jquery.min.js"></script>	
+<script>
+	$.getJSON("json/message.txt",function(data){
+		var addHtml='';
+		$(data).each(function(){
+			addHtml+='<li class="clearfix">'
+			+'         <div class="profile">'
+			+'            <img src=" '+this.images+' " alt="">'
+			+'         </div>'
+			+'         <div class="hold">'
+			+'               <a href=" '+this.href+' "><h2>'+this.name+'</h2></a>'
+			+'               <a href=" '+this.href+' "><p>'+this.message+'</p></a>'
+			+'               <a href=" '+this.href+' "><span>'+this.status+'</span></a>'
+			+'         </div>'
+			+'               <em>'+this.time+'</em>'
+			+'</li>'
+		})
+		$("#dialogue ul").append(addHtml);
+	})
+</script>
+</body>
+</html>

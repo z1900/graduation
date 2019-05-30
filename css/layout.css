@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-family:"Microsoft Yahei";
+	font-size: 14px;
+	min-width:320px;
+	max-width: 640px;
+	margin: 0 auto;
+}
+ul,p,h1,h2,h3,h4,h5,h6,form,dl,dd,dt{
+	padding:0;
+	margin:0;
+}
+ol,ul{
+	list-style:none;
+}
+a img{
+	border:none;
+}
+a{
+	text-decoration:none;
+	color: #000;
+}
+a:hover{text-decoration: none;}
+a:visited{
+	color:#333;
+}
+.clearfix{
+	zoom:1;
+}
+.clearfix:after{
+	clear:both;
+	content:"";
+	display:block;
+	height:0;
+	font-size:0;
+	overflow:hidden;
+	visibility:hidden;
+}
+.clear{
+	clear:both;
+	font-size:0;
+	height:0;
+	overflow:hidden;
+}
+.icon {
+	width: 1.9em; height: 1.9em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+/*css全局*/

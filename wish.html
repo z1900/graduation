@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=0,minimum-scale=1.0, maximum-scale=1.0"">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/botFixed.css">
+<link rel="stylesheet" href="css/wish.css">
+<script src="svg/iconfont.js"></script>
+<title>wish</title>
+</head>
+<body>
+<header id="header">
+	<h2>心愿单</h2>
+</header>
+<section id="wish-search">
+	<form id="ss" name="ss">
+        <input type="text" class="search_key"  placeholder="探索我的心愿" />
+        <input type="button" class="submit"  value="">
+    </form>
+</section>
+
+<section id="wish">
+	<ul>
+		<li>
+		<img src="" alt="">
+		<a href="">
+			<h2></h2>
+			<p></p>
+		</a>
+		<svg class="xin" aria-hidden="true" id="pink">
+	        <use xlink:href="#icon-xin"></use>
+	    </svg>
+		</li>
+	</ul>
+</section>
+
+<div class="mask" id="mask">
+	<div class="confirm">
+		<div class="warn">确认取消此心愿吗？</div>
+		<div class="cancel">取消</div>
+		<div class="ensure">确定</div>
+	</div>
+</div>
+
+<section id="botFixed">
+<ul>
+	<li>
+		<a href="seek.html">
+	    <svg class="boticon" aria-hidden="true">
+	      <use xlink:href="#icon-search"></use>
+	    </svg>
+	   <p>探索</p>
+       </a>
+	</li>
+	<li>
+		<a href="wish.html">
+	    <svg class="cur-svg" aria-hidden="true">
+          <use xlink:href="#icon-like"></use>
+        </svg>
+	    <p style="color: #ff5a5f;">心愿单</p>
+        </a>
+	</li>
+	<li>
+		<a href="journey.html">
+	    <svg class="boticon" aria-hidden="true">
+          <use xlink:href="#icon-house"></use>
+        </svg>
+	    <p>旅程</p>
+        </a>
+	</li>
+	<li>
+		<a href="messages.html">
+	    <svg class="boticon" aria-hidden="true">
+            <use xlink:href="#icon-duihuakuan"></use>
+        </svg>
+	    <p>收件箱</p>
+        </a>
+	</li>
+	<li>
+		<a href="personal.php">
+	    <svg class="boticon" aria-hidden="true">
+          <use xlink:href="#icon-personal"></use>
+        </svg>
+	    <p>我的</p>
+         </a>
+	</li>
+</ul>
+</section>
+<script src="js/jquery.min.js"></script>
+<script>
+	$(function(){
+	var num;		
+	$("#wish .xin").click(function(){
+		   num=$("#wish .xin").index(this); 
+		    var h=$(document).scrollTop(); 
+			$("#mask").css("top",h+"px").fadeIn();			
+			
+		})
+	$("#mask .cancel").click(function(){
+		$("#mask").fadeOut("slow");
+	})
+	$("#mask .ensure").click(function(){
+		$("#wish>ul>li").eq(num).remove();
+		$("#mask").fadeOut();
+	})
+})
+
+var shuju;
+$.getJSON("json/wish.txt",function(data){
+	$.each(data,function(i,item){
+		if(i>0)
+      	{
+      		var mb=$("#wish>ul>li:first").clone(true);
+      		$("#wish>ul").append(mb);	
+      	}
+		$("#wish>ul>li").eq(i).find("img").attr("src",item.images).next("a").attr("href",item.href).children("h2")
+		.text(item.title).next("p").text(item.content);
+	})
+	shuju=data;
+})
+
+
+$("#ss input:eq(1)").click(function(){
+    var data=shuju;
+    var j=-1;
+   var lif=$("#wish>ul>li:first").clone(true)
+   $("#wish>ul>li").remove();
+    for(var i=0;i<data.length;i++)     
+      {   
+	 var ok=data[i].title.indexOf($(".search_key").val())		        
+      		if(ok>=0){
+      		$("#wish>ul").append(lif);
+      		lif=$("#wish>ul>li:first").clone(true);
+            j++;
+			$("#wish>ul>li").eq(j).find("img").attr("src",data[i].images).next("a").attr("href",data[i].href).children("h2")
+		.text(data[i].title).next("p").text(data[i].content);
+      	}
+      }
+   } ) 
+</script>
+</body>
+</html>

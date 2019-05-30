@@ -1,0 +1,262 @@
+@charset "utf-8";
+.loginBox{
+	max-width: 330px;
+	margin: 2rem auto 0;
+	box-sizing: border-box;
+	padding: 15px;
+}
+.loginBox .loginHeader{
+	width: 100%;
+	padding: 0.5rem 0;
+	font-size: 1rem;
+	color: #fff;
+	border: 1px solid #357ebd;
+	text-align: center;
+	background: #428bca;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+.loginBox .loginError{
+	width: 100%;
+	padding: 0.4rem 0;
+	text-align: center;
+	color: #666;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	box-sizing: border-box;
+}
+.loginBox .loginError span{
+	color: #f00;
+}
+.loginBox .loginForm label{
+	display: none;
+}
+.loginBox .loginForm input{
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	padding-left: 3px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.loginBox .loginForm .loginSubmit{
+	display: block;
+	width: 100px;
+	height: 34px;
+	text-align: center;
+	line-height: 34px;
+	color: #fff;
+	background: #fd6a6f;
+	border-bottom: 3px solid #fd5056;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.loginBox .loginForm .loginSubmit:hover{
+	background: #ff5a5f;
+	border-bottom: 3px solid #fb4b50;
+}
+
+.header{
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #f8f8f8;
+	border-bottom: 1px solid rgb(216, 215, 215);
+}
+.header h2{
+	color: #474747;
+	letter-spacing: 6px;
+	line-height: 50px;
+	display: inline-block;
+	margin-left: 20px;
+}
+.header p{
+	float: right;
+	line-height: 50px;
+	margin-right: 20px;
+	font-size: 1rem;
+	color: #428bca;
+}
+.header p>a{
+	color: #428bca;
+}
+.container{
+	width: 100%;
+	height: 100%;
+}
+.container .left, .right{
+	float: left;
+}
+.container .left{
+	padding-top: 51px;
+	width: 220px;
+	background: #f8f8f8;
+	border-right: 1px solid rgb(216, 215, 215);
+	overflow: hidden; 
+}
+.container .left .active{
+	background: #428bca;
+	color: #fff;
+}
+.container .left span{
+	display: block;
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	text-align: left;
+	color: #428bca;
+	padding-left: 60px;
+	border-bottom: 1px solid rgb(216, 215, 215);
+	cursor: pointer;
+}
+.container .left span:first-child{
+	margin-top: 99px;
+	border-top: 1px solid rgb(216, 215, 215);
+}
+.container .right{
+	width: 80%;
+}
+.container .right .rightTop{
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	background: #fff;
+	margin-top: 50px;
+	border-bottom: 1px solid rgb(216, 215, 215);
+}
+.container .right .rightTop h2{
+	margin-left: 60px;
+	color: #6d6d6d;
+	letter-spacing: 3px;
+}
+.container .right .rightTop h2>span{
+	color: #58a;
+}
+.container .right .rightMid{
+	width: 100%;
+}
+.container .right .rightMid .none{
+	display: none;
+}
+.container .right .rightMid .listShow{
+	width: 100%;
+}
+.container .right .rightMid .admin table{
+	width: 80%;
+	margin: 20px auto 0;
+	border-collapse: separate;   
+	border-spacing: 15px;
+}
+.container .right .rightMid .user table{
+	margin-left: 30px;
+}
+.container .right .rightMid .admin table tr{
+	border-bottom: 1px solid rgb(216, 215, 215);
+}
+.container .right .rightMid .user table tr:hover td,
+.container .userSearch table tr:hover td{
+	background: #f5f5f5;
+}
+.container .right .rightMid .user table tr,
+.container .userSearch table tr{
+	border-color: #ccc;
+}
+.container .right .rightMid .admin table th,
+.container .right .rightMid .admin table td,{
+	text-align: left;
+	margin-bottom: 15px;
+}
+.container .right .rightMid .user img{
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+.container .right .rightMid .user a{
+	color: #2a6496;
+	margin-right: 3px;
+}
+.container .right .rightMid .userAdd h2{
+	margin: 20px 0 0 250px;
+	font-size: 20px;
+	font-weight: normal;
+	color: #333;
+}
+.container .right .rightMid .userAdd form{
+	width: 600px;
+	margin: 20px auto 0;
+}
+.container .right .rightMid .userAdd form label{
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	font-size: 16px;
+	margin-right: 8px;
+}
+.container .right .rightMid .userAdd form input[type='text'],
+.container .right .rightMid .userAdd form input[type='password'],
+.container .right .rightMid .userAdd form input[type='email'],
+.container .right .rightMid .userAdd form input[type='date'],
+.container .right .rightMid .userAdd form select{
+	height: 34px;
+	width: 300px;
+	outline: none;
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.container .right .rightMid .userAdd form input[type='button']{
+	width: 100px;
+	height: 35px;
+	background: #428bca;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	color: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-left: 115px;
+
+}
+.container .right .rightMid .userAdd form li{
+	margin-bottom: 15px;
+}
+.container .right .rightMid .userSearch form{
+	margin: 15px 0 0 20px;
+}
+.container .right .rightMid .userSearch form label{
+	display: none;
+}
+.container .right .rightMid .userSearch form input[type='text']{
+	width: 200px;
+	height: 23px;
+	padding-left: 8px;
+}
+.container .right .rightMid .userSearch form input[type='button']{
+	height: 30px;
+	width: 70px;
+	background: #428bca;
+	border-radius: 4px;
+	border: none;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+}
+.container .right .rightMid .userSearch .sresult{
+	margin-left: 20px;
+}
+.container .right .rightMid .userSearch .sresult img{
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	display: inline-block;
+}
+.container .right .rightMid .userSearch .sresult a{
+	color: #2a6496;
+	margin-right: 3px;
+}
